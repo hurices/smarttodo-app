@@ -9,7 +9,6 @@ function App() {
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
   
-  const [loading, setLoading] = useState(false); // Plus besoin de vrai loading
   const [error, setError] = useState('');
 
   // Sauvegarder automatiquement quand todos change
