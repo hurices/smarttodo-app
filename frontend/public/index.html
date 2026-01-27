@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    
+    <!-- ========== META TAGS ESSENTIELS ========== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta 
+      name="description" 
+      content="SmartTodo - Application de gestion de tâches full-stack avec React, Express et MySQL" 
+    />
+    
+    <!-- ========== FAVICON & LOGOS ========== -->
+    <!-- 1. Favicon principal (pour tous les navigateurs) -->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <!-- 2. Pour les navigateurs modernes (PNG/SVG) -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/logo.png" sizes="512x512" />
+    
+    <!-- 3. Pour iOS (iPhone/iPad) -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    
+    <!-- 4. Manifest PWA -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- ========== TITRE ========== -->
+    <title>SmartTodo | Gestionnaire de tâches intelligent</title>
+    
+    <!-- ========== POLICE OPTIONNELLE ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Améliorations typographiques */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Supprime les marges par défaut */
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Message si JavaScript désactivé -->
+    <noscript>
+      <div style="
+        text-align: center;
+        padding: 50px;
+        font-family: sans-serif;
+        background: #f8f9fa;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      ">
+        <h1 style="color: #dc2626; margin-bottom: 20px;">
+          ⚠️ JavaScript est désactivé
+        </h1>
+        <p style="font-size: 1.2rem; max-width: 600px; line-height: 1.6;">
+          SmartTodo nécessite JavaScript pour fonctionner.<br>
+          Activez JavaScript dans les paramètres de votre navigateur et actualisez la page.
+        </p>
+      </div>
+    </noscript>
+    
+    <!-- Point de montage React -->
+    <div id="root"></div>
+    
+    <!--
+      NOTE: Le code React sera injecté ici automatiquement
+      lors du build (npm run build) ou du développement (npm start)
+    -->
+  </body>
+</html>
