@@ -5,8 +5,8 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
     <div 
       className={`flex items-center justify-between p-4 mb-3 rounded-lg shadow transition-all duration-200 ${
         todo.completed 
-          ? 'bg-green-50 border-l-4 border-green-500' 
-          : 'bg-white hover:bg-gray-50'
+          ? 'bg-emerald-500/10 border-l-4 border-emerald-400' 
+          : 'bg-white/5 hover:bg-white/10 border border-white/10'
       }`}
     >
       <div className="flex items-center flex-grow">
@@ -14,8 +14,8 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
           onClick={() => onToggle(todo.id)}
           className={`flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center mr-4 transition-all ${
             todo.completed 
-              ? 'bg-green-500 border-green-500' 
-              : 'border-gray-300 hover:border-blue-500'
+              ? 'bg-emerald-400 border-emerald-400' 
+              : 'border-white/30 hover:border-cyan-300'
           }`}
           aria-label={todo.completed ? "Marquer comme non complété" : "Marquer comme complété"}
         >
@@ -30,8 +30,8 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
           <span 
             className={`text-lg font-medium ${
               todo.completed 
-                ? 'line-through text-gray-500' 
-                : 'text-gray-800'
+                ? 'line-through text-white/50' 
+                : 'text-white'
             }`}
           >
             {todo.task}
@@ -39,10 +39,10 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
           
           {todo.due_date && (
             <div className="flex items-center mt-1">
-              <svg className="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-white/40 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-white/60">
                 {new Date(todo.due_date).toLocaleDateString('fr-FR', {
                   weekday: 'short',
                   year: 'numeric',
@@ -56,12 +56,12 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
           <div className="flex items-center mt-2">
             <span className={`text-xs px-2 py-1 rounded ${
               todo.completed 
-                ? 'bg-green-100 text-green-800' 
-                : 'bg-blue-100 text-blue-800'
+                ? 'bg-emerald-500/20 text-emerald-100' 
+                : 'bg-cyan-500/20 text-cyan-100'
             }`}>
               {todo.completed ? 'Terminée' : 'En cours'}
             </span>
-            <span className="text-xs text-gray-400 ml-3">
+            <span className="text-xs text-white/40 ml-3">
               Créé le {new Date(todo.created_at).toLocaleDateString('fr-FR')}
             </span>
           </div>
@@ -70,7 +70,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
       
       <button
         onClick={() => onDelete(todo.id)}
-        className="flex-shrink-0 ml-4 p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+        className="flex-shrink-0 ml-4 p-2 text-white/40 hover:text-red-300 hover:bg-red-500/10 rounded-full transition-colors"
         aria-label="Supprimer la tâche"
         title="Supprimer"
       >
